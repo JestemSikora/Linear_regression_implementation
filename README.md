@@ -1,28 +1,47 @@
-# Linear_regression_implementation
+# Linear Regression Implementation
 
-<!-- Przykład plakietek (badges) – usuń lub dodaj, jeśli potrzebujesz -->
-![Status build](https://img.shields.io/github/actions/workflow/status/<user>/<repo>/build.yml)
-![License](https://img.shields.io/github/license/<user>/<repo>)
-![Version](https://img.shields.io/github/v/release/<user>/<repo>)
-
-<!-- --------- KRÓTKI OPIS --------- -->
-My implementation of Linear Regression Model. Main reason was to better understand the concept.  
+<!-- --------- SHORT DESCRIPTION --------- -->
+My own implementation of a Linear Regression model, created mainly to deepen my understanding of the concept.  
 
 ---
 
-## Spis treści
-1. [Opis](#opis)
-2. [Wymagania](#wymagania)
-3. [Instalacja](#instalacja)
-4. [Użycie](#użycie)
-5. [Funkcjonalności](#funkcjonalności)
+## Table of Contents
+1. [Description](#description)
+2. [Requirements](#requirements)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Features](#features)
 
 ---
 
-## Opis
-I will add improvments in the future. Next steps are:
-  -> Better visualization
-  -> Improving speed and efficiency
-  -> More comments and descriptions
+## Description
+I will add improvements in the future. Planned next steps:
+
+- Better visualization  
+- Increased speed and efficiency  
+- Additional comments and documentation  
+
+## Requirements
+> _List the minimum versions of languages/libraries needed here._
+
+| Tool / Library | Minimum Version |
+| -------------- | --------------- |
+| Python         | _e.g._ 3.11     |
+| NumPy          | _e.g._ 1.26.0   |
+| …              | …               |
+
+## Installation
+```bash
+# 1. Clone the repository
+git clone https://github.com/<your-user>/<your-repo>.git
+cd <your-repo>
+
+# 2. (Optional) create a virtual environment
+python -m venv venv
+source venv/bin/activate      # On Windows: .\venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
 
 
