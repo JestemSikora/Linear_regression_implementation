@@ -52,10 +52,10 @@ cost = model_1.cost_function(X_train,Y_train, None, None)
 print(f"Prediction of cost {cost}")
 
 # Gradient Descent
-for i in range(500):
+for i in range(20):
     new_value = model_1.gradient_descent(X_train, Y_train)
 
-print(f'Nowe wartości: {new_value[:5]}, {new_value[5:]}')
+print(f'Nowe wartości: {new_value}')
 
 
 
