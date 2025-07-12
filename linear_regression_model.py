@@ -2,16 +2,15 @@ import numpy as np
 import random
 
 class Linear_Regression:
-    def __init__(self,X,y):
+    def __init__(self, X,y ):
         self.X = X
         self.y = y
-        self.m = X.shape[0]
 
     def start_weights(self, X, y):
         # Random weights   
         weights = []
         weights_0 = round(random.uniform(-2, 2), 2)
-        for i in range(len(X.iloc[1])):
+        for i in range(X.shape[1]):
             weights.append(round(random.uniform(0, 2), 2))
 
         return weights, weights_0
@@ -37,13 +36,13 @@ class Linear_Regression:
         gap = 0
         for j in range(m):
             gap += (y_prediction[j] - y.iloc[j])**2
-        cost = 1/(2*m) * gap
+        cost = (1/(2*m)) * gap
             
         return cost, weights, w0
         
     def gradient_descent(self, X, y, weight, w0):
         alfa = 0.01
-        y_prediction, weights, w0 = self.fit(X,y,None, None, weight, w0)
+        y_prediction, weights, w0 = self.fit(X,y,weight, w0)
         sum_w = 0
         sum_w0 = 0
         list_cost_function = []
@@ -57,9 +56,10 @@ class Linear_Regression:
             weights[i] = weights[i] - alfa * 1/(X.shape[0]) * sum_w
 
             
-        list_cost_function = self.cost_function(X, y, weights, w0)
+        list_cost_function.append(self.cost_function(X, y, weights, w0))
+        y_pred_ = self.fit(X, y, weight, w0)
 
 
-        return list_cost_function
+        return list_cost_function, y_pred_
         
 

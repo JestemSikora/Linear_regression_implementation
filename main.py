@@ -63,7 +63,7 @@ X_test = test_data.drop('Life expectancy ', axis=1)
 X_test = StandardScaler_fun(X_test)
 
 # Plotting actual data
-
+'''
 pca = PCA(n_components=2)
 X_pca = pca.fit_transform(X_train)
 
@@ -71,24 +71,27 @@ plt.scatter(X_pca[:,0], X_pca[:,1], c=Y_train, cmap='viridis')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
 plt.title('PCA of n-dimensional data')
-plt.colorbar(label='Target Class')
+plt.colorbar(label='Target Class')'''
 
-# plt.show()
+#plt.show()
 
-model_1 = Linear_Regression()
+model_1 = Linear_Regression(X_train, Y_train)
 
 # Training our model:
 # old_value, weights, w0 = model_1.fit(X_train,Y_train, None, None)
 # print(f'Stare wartości: {old_value[:5]}, {old_value[5:]}')
 
-cost = model_1.cost_function(X_train,Y_train, None, None)
-print(f"Prediction of cost {cost[0]}")
+cost, weight, w0 = model_1.cost_function(X_train,Y_train, None, None)
+print(f"Prediction of cost {cost}")
 
-# Gradient Descent
-for i in range(80):
-    new_value = model_1.gradient_descent(X_train, Y_train, cost[1], cost[2])
+y_before_train = model_1.fit(X_train, Y_train, weight, w0)
 
-print(f'Nowe wartości: {new_value}')
+# Gradient Descent with update
+for i in range(40):
+    list_cost_function, y_pred_ = model_1.gradient_descent(X_train, Y_train, weight, w0)
+
+print(f'Cost function after traininng: {list_cost_function}')
+
 
 
 
