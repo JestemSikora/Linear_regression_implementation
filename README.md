@@ -1,4 +1,4 @@
-# Linear Regression Implementation
+# Linear Regression Implementation (!WIP - Work In Progress!)
 
 <!-- --------- SHORT DESCRIPTION --------- -->
 My own implementation of a Linear Regression model, created mainly to deepen my understanding of the concept.  
